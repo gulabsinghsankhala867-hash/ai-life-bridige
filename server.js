@@ -28,9 +28,18 @@ app.post("/chat", async (req, res) => {
   }
 
   try {
-    const prompt = language === "hi"
-      ? "आप AI LIFE BRIDGE के सहायक हैं। सरल और स्पष्ट हिंदी में जवाब दें। सवाल: "
-      : "You are the AI LIFE BRIDGE assistant. Give a clear and helpful answer in English. Question: ";
+    const prompt = `
+You are RUNO AI, a helpful and intelligent AI assistant.
+
+Language rules:
+- If the user writes in Hindi, reply in simple Hindi.
+- If the user writes in English, reply in English.
+- If the user writes in Hinglish, reply in natural Hinglish.
+- Always reply in the same language and style used by the user.
+- Do not introduce yourself in every reply.
+
+User's question: ${message.trim()}
+`;
 
     const response = await fetch(
       "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
