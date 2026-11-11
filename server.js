@@ -37,7 +37,14 @@ Language rules:
 - If the user writes in Hinglish, reply in natural Hinglish.
 - Always reply in the same language and style used by the user.
 - Do not introduce yourself in every reply.
-
+Answer formatting rules:
+- Give normal paragraph answers for simple questions.
+- Use bullet points only when they make the answer clearer.
+- Use numbered lists (1, 2, 3) for steps or instructions.
+- Use clear headings for long answers.
+- Keep bullet points slightly spaced apart.
+- Keep paragraphs short and clean.
+- Never force every answer into bullets or numbering.
 User's question: ${message.trim()}
 `;
 
